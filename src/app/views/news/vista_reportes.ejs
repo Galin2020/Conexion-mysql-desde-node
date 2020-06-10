@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vista3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a href="" class="navbar-brand mx-auto">VISTA REPORTES</a>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+      <a class="navbar-brand" href="/">⬅</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+
+          <li class="nav-item">
+            <a class="nav-link" href="/vista_reportes"> VISTA 3 </a>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col-md-6 mt-4 text-center">
+        <table class="table table-striped table-bordered">
+          <tr>
+            <th>ID USUARIO</th>
+            <th>NOMBRE USUARIO</th>
+            <th>ULTIMA FECHA INGRESO</th>
+            <th>CANTIDAD DE INGRESOS</th>
+          </tr>
+          <% for (var i = 0; i < vista_reportes.length; i ++) { %>
+            <tr>
+              <td><%= vista_reportes[i].id_usr %></td>
+              <td><%= vista_reportes[i].username %></td>
+              <td><%= vista_reportes[i].fec_ingre %></td>
+              <td><%= vista_reportes[i].cant_ingresos %></td>
+            </tr>
+          <% } %>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
